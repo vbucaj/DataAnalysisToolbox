@@ -17,7 +17,7 @@ Specifically:
             drop.drop_subjects(3,inplace=True)
             drop.impute_values(5,inplace=True)
             
-   Applying these methods in this order, will first drop subjects who are missing three or more values; it will drop features that miss 5% of values or more, and it will impute the rest by first building a distribution for each feature and sampling randomly.
+   Applying these methods in this order, will first drop subjects who are missing three or more values; it will drop features that miss 5% of values or more, and it will impute the rest by first building an empirical distribution for each feature and then imputing the missing values by values randomly sampled from the corresponding empirical distribution. 
   
   
   (2) Remove Outliers
