@@ -10,6 +10,8 @@ Specifically:
   This method will drop subjects and features with 'too many' missing values and impute the rest 
   
     # How to use:
+    
+    from minitoolboxVB import DropImpute
      
             drop=DropImpute(dataframe)
             drop.drop_subjects(3,inplace=True)
@@ -23,7 +25,10 @@ Specifically:
    This method will remove all the values that lie below Q1-1.5IQR and above Q3+1.5IQR
   
     # How to use
-  
+      
+      from minitoolboxVB import Outliers
+      
+      
           outliers=Outliers(dataframe)
           outliers.remove_outliers()
     
@@ -36,6 +41,8 @@ The methods will perfor feature selection for both regression and classification
 First, it will randomly split the data in a training and test set. Then, it will train the model on the training set. Next, it will shuffle the values of each feature in the test set and measure one of the prespecified metrics to observe the decrease in the predictive performance of the model.
 
     # How to use:
+    
+      from minitoolboxVB import FeatureSelection
     
         feat_sel=FeatureSelection(df, classifier=LogisticRegression(solver='liblinear',penalty='l2'))
 
