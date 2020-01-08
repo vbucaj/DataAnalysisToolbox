@@ -49,21 +49,21 @@ First, it will randomly split the data in a training and test set. Then, it will
  
  ```python
     
-      from minitoolboxVB import FeatureSelection
+    from minitoolboxVB import FeatureSelection
     
-        feat_sel=FeatureSelection(df, classifier=LogisticRegression(solver='liblinear',penalty='l2'))
+      feat_sel=FeatureSelection(df, classifier=LogisticRegression(solver='liblinear',penalty='l2'))
 
-        out=feat_sel.feature_selection(classModel=True,regModel=False,
-                                                             roc=True,
-                                                             boxPlot=False,
-                                                             split=False,
-                                                             iterations=1,
-                                                             length=14,
-                                                             height=8,
-                                                             title='Feature Importance: ROC Curves After Shuffling',
-                                                             title_fontsize=22,
-                                                             x_fontsize=16,
-                                                             y_fontsize=16)
+      out=feat_sel.feature_selection(classModel=True,regModel=False,
+                                                           roc=True,
+                                                           boxPlot=False,
+                                                           split=False,
+                                                           iterations=1,
+                                                           length=14,
+                                                           height=8,
+                                                           title='Feature Importance: ROC Curves After Shuffling',
+                                                           title_fontsize=22,
+                                                           x_fontsize=16,
+                                                           y_fontsize=16)
 ```
     
     
